@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var classifier: Classifier
     private val executor = Executors.newSingleThreadExecutor()
 
-    private val MODEL_PATH = "mobilenet.tflite"
-    private val LABEL_PATH = "labels.txt"
+    private val MODEL_PATH = "model.tflite"
+    private val LABEL_PATH = "labels2.txt"
     private val INPUT_SIZE = 224
     private val QUANT = false
 
@@ -96,12 +96,12 @@ class MainActivity : AppCompatActivity() {
         cameraView.onResume()
     }
     override fun onPause() {
-        cameraView.onPause()
         super.onPause()
+        cameraView.onPause()
     }
     override fun onStop() {
-        cameraView.onStop()
         super.onStop()
+        cameraView.onStop()
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)

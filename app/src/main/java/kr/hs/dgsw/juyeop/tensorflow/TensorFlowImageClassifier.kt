@@ -166,6 +166,5 @@ class TensorFlowImageClassifier : Classifier {
 
     override fun close() {
         interpreter.close()
-        interpreter = null!!
     }
 }
